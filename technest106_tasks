@@ -1,0 +1,14 @@
+#Problem Set 2:Problem 1 - Paying Debt off in a Year 
+
+#------------------------------------------
+month = 0
+newBal = balance
+
+while month < 12:
+    minpayment = newBal * monthlyPaymentRate
+    unpaid = newBal - minpayment
+    intrest = unpaid * annualInterestRate / 12
+    newBal = unpaid + intrest
+    month += 1
+print(round(newBal,2))
+#-------------------------------------------
