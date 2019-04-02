@@ -1,0 +1,15 @@
+#----------------------------------------------
+minimumPayment = 0
+monthlyInterestRate = annualInterestRate/12
+originalbalance = balance
+
+while balance > 0:
+    minimumPayment += 10
+    balance = originalbalance
+    for month in range(12):
+        unpaid = balance - minimumPayment
+        interest = unpaid * monthlyInterestRate
+        balance = unpaid + interest
+        
+print("lowest payment:", round(minimumPayment,2))
+#----------------------------------------------
