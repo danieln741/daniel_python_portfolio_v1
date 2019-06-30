@@ -1,0 +1,4 @@
+def decrypt_story():
+    secretmessage = get_story_string()
+    ciphertext =  CiphertextMessage(secretmessage)
+    return ciphertext.decrypt_message()
